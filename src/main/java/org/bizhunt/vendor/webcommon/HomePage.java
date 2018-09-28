@@ -1,4 +1,4 @@
-package com.giffing.examples.wicket.spring.boot.websockets.pages;
+package org.bizhunt.vendor.webcommon;
 
 import java.util.ArrayList;
 
@@ -18,6 +18,7 @@ import org.apache.wicket.protocol.ws.api.WebSocketBehavior;
 import org.apache.wicket.protocol.ws.api.WebSocketRequestHandler;
 import org.apache.wicket.protocol.ws.api.message.IWebSocketPushMessage;
 import org.apache.wicket.spring.injection.annot.SpringBean;
+import org.bizhunt.vendor.model.User;
 
 import com.giffing.wicket.spring.boot.context.scan.WicketHomePage;
 import com.giffing.wicket.spring.boot.starter.web.servlet.websocket.WebSocketMessageBroadcaster;
@@ -37,6 +38,9 @@ public class HomePage extends WebPage {
 	
 	private TextField<String> chatTextField;
 	
+	@SpringBean
+	private User user;
+	
 	public HomePage() {
 		
 		queue(new Form<Void>("form"));
@@ -48,6 +52,7 @@ public class HomePage extends WebPage {
 			@Override
 			protected void onSubmit(AjaxRequestTarget target) {
 				broadcaster.send(new ChatMessageEvent(latestChatMessage.getObject()));
+				System.err.println(user.calc());
 			}
 		});
 		

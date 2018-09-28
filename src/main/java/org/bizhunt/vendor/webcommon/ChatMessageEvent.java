@@ -1,9 +1,10 @@
-package com.giffing.examples.wicket.spring.boot.websockets.pages;
+package org.bizhunt.vendor.webcommon;
 
 import org.apache.wicket.protocol.ws.api.message.IWebSocketPushMessage;
 
 public class ChatMessageEvent implements IWebSocketPushMessage{
 	
+	private static final long serialVersionUID = -4938778930894651868L;
 	private String message;
 
 	public ChatMessageEvent(String message){
