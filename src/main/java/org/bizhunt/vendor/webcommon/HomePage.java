@@ -19,6 +19,7 @@ import org.apache.wicket.protocol.ws.api.WebSocketRequestHandler;
 import org.apache.wicket.protocol.ws.api.message.IWebSocketPushMessage;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.bizhunt.vendor.model.User;
+import org.bizhunt.vendor.model.UserRepository;
 
 import com.giffing.wicket.spring.boot.context.scan.WicketHomePage;
 import com.giffing.wicket.spring.boot.starter.web.servlet.websocket.WebSocketMessageBroadcaster;
@@ -39,7 +40,7 @@ public class HomePage extends WebPage {
 	private TextField<String> chatTextField;
 	
 	@SpringBean
-	private User user;
+	private UserRepository userRep;
 	
 	public HomePage() {
 		
@@ -52,7 +53,9 @@ public class HomePage extends WebPage {
 			@Override
 			protected void onSubmit(AjaxRequestTarget target) {
 				broadcaster.send(new ChatMessageEvent(latestChatMessage.getObject()));
-				System.err.println(user.calc());
+				User user = new User("daniel", 12);
+				userRep.save(user);
+				System.err.println(11);
 			}
 		});
 		
