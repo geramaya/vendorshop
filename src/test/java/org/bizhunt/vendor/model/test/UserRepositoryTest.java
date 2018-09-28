@@ -1,7 +1,5 @@
 package org.bizhunt.vendor.model.test;
 
-import org.bizhunt.vendor.model.User;
-import org.bizhunt.vendor.model.UserRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,6 +8,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.*;
+
+import org.bizhunt.vendor.dao.UserRepository;
+import org.bizhunt.vendor.dto.User;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

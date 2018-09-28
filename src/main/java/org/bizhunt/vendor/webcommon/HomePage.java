@@ -18,8 +18,8 @@ import org.apache.wicket.protocol.ws.api.WebSocketBehavior;
 import org.apache.wicket.protocol.ws.api.WebSocketRequestHandler;
 import org.apache.wicket.protocol.ws.api.message.IWebSocketPushMessage;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-import org.bizhunt.vendor.model.User;
-import org.bizhunt.vendor.model.UserRepository;
+import org.bizhunt.vendor.dao.UserRepository;
+import org.bizhunt.vendor.dto.User;
 
 import com.giffing.wicket.spring.boot.context.scan.WicketHomePage;
 import com.giffing.wicket.spring.boot.starter.web.servlet.websocket.WebSocketMessageBroadcaster;

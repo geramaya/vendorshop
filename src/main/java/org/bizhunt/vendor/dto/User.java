@@ -1,4 +1,4 @@
-package org.bizhunt.vendor.model;
+package org.bizhunt.vendor.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,7 +14,7 @@ import lombok.Setter;
 
 @RequiredArgsConstructor
 @Entity
-@Table(name = "TEST_BLUE")
+@Table(name = "USER")
 @Getter
 @Setter
 public class User {
