@@ -55,7 +55,6 @@ public class HomePage extends WebPage {
 				broadcaster.send(new ChatMessageEvent(latestChatMessage.getObject()));
 				User user = new User("daniel", 12);
 				userRep.save(user);
-				System.err.println(11);
 			}
 		});
 		
