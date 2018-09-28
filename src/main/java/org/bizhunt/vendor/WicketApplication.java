@@ -1,4 +1,4 @@
-package com.giffing.examples.wicket.spring.boot.websockets;
+package org.bizhunt.vendor;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
