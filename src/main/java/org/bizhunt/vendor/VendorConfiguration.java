@@ -8,12 +8,15 @@ import com.giffing.wicket.spring.boot.context.extensions.WicketApplicationInitCo
 @ApplicationInitExtension
 public class VendorConfiguration implements WicketApplicationInitConfiguration {
 
-  @Override
-  public void init(WebApplication webApplication) {
+	@Override
+	public void init(WebApplication webApplication) {
 
-	// if you want to customize bootstrap:
-//	BootstrapSettings settings = new BootstrapSettings();
-//	Bootstrap.install(webApplication, settings);
-  }
+		webApplication.getJavaScriptLibrarySettings()
+				.setJQueryReference(org.apache.wicket.resource.JQueryResourceReference.getV3());
+
+		// if you want to customize bootstrap:
+		// BootstrapSettings settings = new BootstrapSettings();
+		// Bootstrap.install(webApplication, settings);
+	}
 
 }

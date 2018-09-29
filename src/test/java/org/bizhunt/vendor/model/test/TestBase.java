@@ -10,6 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = { WicketApplication.class, H2TestProfileJPAConfig.class })
 @ActiveProfiles("test")
 
-public class TestBase {
+public abstract class TestBase {
 
 }
