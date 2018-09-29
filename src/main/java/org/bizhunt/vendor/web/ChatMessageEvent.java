@@ -1,4 +1,4 @@
-package org.bizhunt.vendor.webcommon;
+package org.bizhunt.vendor.web;
 
 import org.apache.wicket.protocol.ws.api.message.IWebSocketPushMessage;
 
