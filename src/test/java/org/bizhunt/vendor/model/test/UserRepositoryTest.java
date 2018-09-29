@@ -4,21 +4,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
-import org.bizhunt.vendor.WicketApplication;
 import org.bizhunt.vendor.dao.UserRepository;
 import org.bizhunt.vendor.dto.User;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = { WicketApplication.class, H2TestProfileJPAConfig.class })
-@ActiveProfiles("test")
-public class UserRepositoryTest {
+public class UserRepositoryTest extends TestBase {
 	@Autowired
 	private UserRepository userRepository;
 
@@ -48,5 +40,7 @@ public class UserRepositoryTest {
 			count++;
 		}
 		assertEquals(count, 2);
+		
+		userRepository.findByUsername("Bob");
 	}
 }

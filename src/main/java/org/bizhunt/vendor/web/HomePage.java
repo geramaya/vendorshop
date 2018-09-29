@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.form.AjaxButton;
 import org.apache.wicket.devutils.debugbar.DebugBar;
+import org.apache.wicket.markup.head.CssHeaderItem;
+import org.apache.wicket.markup.head.IHeaderResponse;
+import org.apache.wicket.markup.head.JavaScriptHeaderItem;
 import org.apache.wicket.markup.html.WebMarkupContainer;
-import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
@@ -27,7 +29,7 @@ import com.giffing.wicket.spring.boot.context.scan.WicketHomePage;
 import com.giffing.wicket.spring.boot.starter.web.servlet.websocket.WebSocketMessageBroadcaster;
 
 @WicketHomePage
-public class HomePage extends WebPage {
+public class HomePage extends VendorBasePage {
 	private static final long serialVersionUID = -3900297384685561512L;
 
 	@SpringBean
@@ -104,5 +106,4 @@ public class HomePage extends WebPage {
 		});
 
 	}
-
 }

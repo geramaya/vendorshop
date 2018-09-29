@@ -1,23 +1,55 @@
 <html xmlns:wicket="http://wicket.apache.org">
-	<head>
-		<title>Wicket!</title>
-	</head>
-	<body>
-		<div class="container">
-				<form wicket:id="form">
-					<input type="text" wicket:id="chatInput" />
-					<button wicket:id="send">Send it!</button>
-				</form>
-				
-				<div wicket:id="chatContainer">
-					<ul wicket:id="chat">
-						<li wicket:id="message" />
-					</ul>
-				</div>
-				
-			<wicket:child/>
+<head>
+<title>Wicket!</title>
+</head>
+<body>
+	<div class="container">
+		<form wicket:id="form">
+			<input type="text" wicket:id="chatInput" />
+			<button wicket:id="send">Send it!</button>
+		</form>
+
+		<div wicket:id="chatContainer">
+			<ul wicket:id="chat">
+				<li wicket:id="message" />
+			</ul>
 		</div>
-		<a wicket:id="mylink">second page</a>
-		 <div wicket:id="debug"></div>
-	</body>
+
+		<wicket:child />
+		
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>		
+		
+	</div>
+	<a wicket:id="mylink">second page</a>
+	<div wicket:id="debug"></div>
+</body>
 </html>
