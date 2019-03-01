@@ -62,6 +62,11 @@ public class HomePage extends VendorBasePage {
 
 		add(new Link<Void>("mylink") {
 
+			/**
+			 * 
+			 */
+			private static final long serialVersionUID = -2727906424644149126L;
+
 			@Override
 			public void onClick() {
 				setResponsePage(SecondPage.class);
@@ -76,6 +81,11 @@ public class HomePage extends VendorBasePage {
 		queue(chatContainer);
 
 		chatList = new ListView<String>("chat", chatModel) {
+
+			/**
+			 * 
+			 */
+			private static final long serialVersionUID = -3215669551936710320L;
 
 			@Override
 			protected void populateItem(ListItem<String> item) {
