@@ -37,10 +37,11 @@ public class UserRepositoryTest extends TestBase {
 		Iterable<User> users = userRepository.findAll();
 		int count = 0;
 		for (User p : users) {
+			System.out.println("Here comes " + p.getUsername() + " and the age was " + p.getAge());
 			count++;
 		}
-		assertEquals(count, 2);
 		
-		userRepository.findByUsername("Bob");
+		assertEquals("Bob", userA.getUsername());
+		assertEquals(count, 2);
 	}
 }
