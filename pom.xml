@@ -7,12 +7,12 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.4.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>vendorshop</artifactId>
 
 	<properties>
-		<wicket.version>8.4.0</wicket.version>
+		<wicket.version>9.4.0</wicket.version>
 		<wicket-spring-boot.version>2.1.7</wicket-spring-boot.version>
 	</properties>
 
